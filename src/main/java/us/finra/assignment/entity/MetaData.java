@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "meta_data")
+@Table(name = "MetaData")
 public class MetaData {
 	private String name;
 	private String type;

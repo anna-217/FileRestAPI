@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceContextType;
 import javax.persistence.Query;
 import javax.transaction.Transactional;
 
@@ -16,7 +17,7 @@ import us.finra.assignment.utility.Constants;
 @Repository
 public class MetaDataDAOImpl implements MetaDataDAO{
 	
-	@PersistenceContext
+	@PersistenceContext(type = PersistenceContextType.EXTENDED)
 	private EntityManager em; 
 	
 	@Autowired

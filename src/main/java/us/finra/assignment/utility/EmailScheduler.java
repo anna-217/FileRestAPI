@@ -4,8 +4,6 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -26,7 +24,7 @@ public class EmailScheduler {
 	@Autowired
 	Constants constants;
 	
-	@Scheduled (fixedRate = 50000)  // send email in every 50 sec
+//	@Scheduled (fixedRate = 60*60*1000)  // send email in every 50 sec
 	public void sendEmail () {
 		StringBuilder stringBuilder = new StringBuilder();
 		List<MetaData> list = metaDataService.getNewItemInLastHour();
